@@ -1,6 +1,7 @@
 <template>
     <view>
         <mp-top></mp-top>
+        <mp-head></mp-head>
     </view>
 </template>
 

@@ -1,5 +1,9 @@
 <template minapp="mpx" xlang="wxml">
-    
+    <view class="wrap">
+        <view class="login">登录</view>
+        <van-search class="search" shape="round" placeholder="大家都在搜索:连衣裙"></van-search>
+        <van-icon class="icon" name="apps-o"></van-icon>
+    </view>
 </template>
 
 <script>
@@ -9,11 +13,36 @@ createPage({})
 </script>
 
 <style lang="less" scoped>
+.wrap {
+    display: flex;
+    height: 100rpx;
+    .search {
+        flex-grow: 1;
+    }
+}
 
+.login {
+    font-size: 32rpx;
+    text-align: right;
+    width: 100rpx;
+    line-height: 100rpx;
+}
+
+.icon {
+    font-size: 50rpx;
+    text-align: left;
+    width: 80rpx;
+    height: 100rpx;
+    line-height: 110rpx;
+}
 </style>
 
 <script type="application/json">
 {
-    "component": true
+    "component": true,
+    "usingComponents": {
+        "van-search": "vant-weapp/dist/search/index",
+        "van-icon": "vant-weapp/dist/icon/index"
+    }
 }
 </script>
