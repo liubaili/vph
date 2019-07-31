@@ -1,0 +1,56 @@
+<template minapp='mpx' xlang='wxml'>
+    <view class="wrap">
+        <view class="words">
+            <view class="title">品牌特卖 3折封顶</view>
+            <view class="coxt">早10晚8准时上新，7天放心退</view>
+
+        </view>
+    </view>
+</template>
+
+<script>
+import { createPage } from "@mpxjs/core";
+
+createPage({
+
+})
+</script>
+
+<style lang="less" scoped>
+.wrap {
+    width: 750rpx;
+    height: 130rpx;
+    padding-top: 20rpx;
+    background-image: url(../images/top.jpg);
+    background-size: 750rpx 150rpx;
+    color:#fff;
+}
+
+.words {
+    width: 350rpx;
+    margin: 0 auto;
+    text-align: left;
+}   
+
+.title {
+    font-size: 32rpx;
+    line-height: 60rpx;
+}
+
+.coxt {
+    width: 350rpx;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+</style>
+
+
+<script type="application/json">
+  {
+    "component": true
+  }
+</script>
+
