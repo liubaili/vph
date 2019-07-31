@@ -3,7 +3,6 @@
         <view class="words">
             <view class="title">品牌特卖 3折封顶</view>
             <view class="coxt">早10晚8准时上新，7天放心退</view>
-
         </view>
     </view>
 </template>
@@ -12,7 +11,9 @@
 import { createPage } from "@mpxjs/core";
 
 createPage({
+    data:{
 
+    }
 })
 </script>
 

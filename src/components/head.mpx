@@ -1,15 +1,22 @@
 <template minapp="mpx" xlang="wxml">
-    <view class="wrap">
-        <view class="login">登录</view>
-        <van-search class="search" shape="round" placeholder="大家都在搜索:连衣裙"></van-search>
-        <van-icon class="icon" name="apps-o"></van-icon>
+    <view >
+        <view class="wrap">
+            <view class="login">登录</view>
+            <van-search class="search" shape="round" placeholder="大家都在搜索:连衣裙"></van-search>
+            <van-icon class="icon" name="apps-o"></van-icon>
+        </view>
+        <slot></slot>
     </view>
 </template>
 
 <script>
 import { createPage } from "@mpxjs/core";
 
-createPage({})
+createPage({
+    propretis:{
+        
+    }
+})
 </script>
 
 <style lang="less" scoped>
@@ -42,7 +49,9 @@ createPage({})
     "component": true,
     "usingComponents": {
         "van-search": "vant-weapp/dist/search/index",
-        "van-icon": "vant-weapp/dist/icon/index"
+        "van-icon": "vant-weapp/dist/icon/index",
+        "van-tab": "vant-weapp/dist/tab/index",
+        "van-tabs": "vant-weapp/dist/tabs/index"
     }
 }
 </script>

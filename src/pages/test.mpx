@@ -2,6 +2,13 @@
     <view>
         <mp-top></mp-top>
         <mp-head></mp-head>
+        <view class="tab-box">
+            <van-tabs animated class="tab-nav">
+                <van-tab wx:for="{{navdata}}" title="{{item.title}}"></van-tab>
+            </van-tabs>
+            <van-icon class="icon-down" name="arrow-down" />
+        </view>
+        
     </view>
 </template>
 
@@ -10,13 +17,37 @@
 import { createPage } from '@mpxjs/core'
 
 createPage({
-    
+    data:{
+        navdata:[
+            { "title":"今日推荐"},
+            { "title":"最后疯抢"},
+            { "title":"美妆"},
+            { "title":"母婴"},
+            { "title":"国际"},
+            { "title":"家居"},
+            { "title":"家电"},
+            { "title":"生活"},
+            { "title":"唯品奢"}
+        ]
+        
+    }
 })
 
 </script>
 
 <style lang="less" scoped>
-
+.tab-box {
+    width: 750rpx;
+    display: flex;
+    .tab-nav {
+        width:650rpx;
+    }
+    .icon-down {
+        flex-grow: 1;
+        text-align: center;
+        line-height: 80rpx;
+    }
+}
 </style>
 
 <script type="application/json">
@@ -24,7 +55,11 @@ createPage({
     "usingComponents":{
         "list":"../components/list",
         "mp-top":"../components/top",
-        "mp-head":"../components/head"
+        "mp-head":"../components/head",
+        "van-tab": "vant-weapp/dist/tab/index",
+        "van-tabs": "vant-weapp/dist/tabs/index",
+        "van-icon": "vant-weapp/dist/icon/index"
+
 
     }
 }
